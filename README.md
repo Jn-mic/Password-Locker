@@ -1,6 +1,6 @@
 # PASSWORD LOCKER.
 
-## CREATOR:**
+## DEVELOPER:**
 * JACK OWUOR
 (https://github.com/jn-mc)**
 
