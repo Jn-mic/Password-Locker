@@ -60,10 +60,10 @@ def main():
             print("Enter the length that you would like your password to have. Recommended length:)5")
             limit=int(input())
             print('\n')
-            print("**"*15)
-            password=random_password(limit)
+            print("**"*7)
+            password = random_password(limit)
             print("Your password is "+password)
-            print("**"*15)
+            print("**"*7)
         else:
             print("Enter your password")
             password=input()
@@ -72,10 +72,10 @@ def main():
         print("\n")
         print(f"Welcome {name}! Please Login ")
         print("Enter your username that you just created above")
-        vUser=input()
+        User=input()
         print("enter your password")
         vPassword=input()
-        if vUser ==name and vPassword==password:
+        if User ==name and vPassword==password:
             print("\n")
             print(f"Welcome to your dashboard {name}")
             while True:
