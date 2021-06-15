@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3.6
 from user_login import User
 import random
 from user_login import Password
@@ -48,20 +48,22 @@ def random_password(limit):
     return hold
 
 def main():
+        
         print("\n")
         print("WELCOME TO PASSWORD LOCKER ")
         print("\n")
-        print("welcome to Password Locker.. Manage your passwords with ease")
+        
+        print(" welcome to Password Locker.. Manage your passwords with ease ")
         print("Please Register\n Enter your userName")
         name=input()
         print("Use g-generate password or m- to make your own password or press enter- to make your own password \U0001F606 ")
         short_codes=input().lower()
         if short_codes=="g":
-            print("Enter the length that you would like your password to have. Recommended length:)5")
+            print("Enter the length that you would like your password to have. Recommended length:)7")
             limit=int(input())
             print('\n')
             print("**"*7)
-            password = random_password(limit)
+            password=random_password(limit)
             print("Your password is "+password)
             print("**"*7)
         else:
@@ -72,27 +74,27 @@ def main():
         print("\n")
         print(f"Welcome {name}! Please Login ")
         print("Enter your username that you just created above")
-        User=input()
-        print("enter your password")
+        vUser=input()
+        print("enter your password ")
         vPassword=input()
-        if User ==name and vPassword==password:
+        if vUser ==name and vPassword==password:
             print("\n")
             print(f"Welcome to your dashboard {name}")
             while True:
-                print("These are short keys to help you navigate through\n sp- save new password dp-- display all passwords fa-- find a specific account password  dp-- delete password x-- exit this application")
+                print("These are short keys to help you navigate through\n cp- save new password dc-- display all passwords fa-- find a specific account password  dl-- delete password ex-- exit this application")
                 short_codes=input().lower()
                 if short_codes=="cp":
                     print("-"*10)
                     print("Ready to create new password\n")
-                    print(f"{name}Please enter the account name you need to be saved  eg:-Instagram | Facebook | Twitter | Google+ | Pintrest")
+                    print(f"{name} Please enter the account name you need to be saved  eg:-Instagram | Facebook | Twitter | Google+ | Pintrest")
                     thisAccout=input();
                     print("Enter username")
                     username=input();
-                    print("Enter the password make sure no one is watching ")
+                    print("Enter the password make sure no one is watching")
                     password=input()
                     save_user(register(thisAccout,username,password))
                     print("\n")
-                    print(f"{thisAccout} account details saved successfully")
+                    print(f"{thisAccout} account details saved successfully ")
                     print("\n")
 
                 elif short_codes=="dc":
@@ -102,7 +104,7 @@ def main():
                         print("Account Name \t  Username\t password")
                         print("_"*60)
                         for account in display_passwords():
-                            print(f"{account.username} \t {account.password}.......{account.email}")
+                            print(f"{account.username} \t {account.password}............{account.email}")
                             print("\n")
                         print("--"*40)
                     else:
@@ -140,7 +142,7 @@ def main():
                         print(f"{delAccount} Account deleted successfully")
                         print("\n")
                     else:
-                        print("Oh!...an error occurred,That account does not exist")
+                        print("Oh!...an error occurred That account does not exist")
 
 
 
@@ -153,7 +155,7 @@ def main():
                     if sure=="no":
                         continue
                     else:
-                        print("Come Again!")
+                        print("Bye!!!")
                         break
                 else:
                     print("I didn't Get you would you mind using the short codes please")
